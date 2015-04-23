@@ -15,7 +15,8 @@ run_all(){
 # LOAD AVERAGE
 echo "---- LOAD AVERAGE"
 $SCRIPTSFOLDER/loadavg.sh -w 10 -c 20 -e $EMAIL 
-
+echo "---- DISK & iNODE Free Space"
+$SCRIPTSFOLDER/diskspace.sh -w 2 -c 5 -e $EMAIL
 }
 read_config
 run_all
